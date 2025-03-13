@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Clonar Código') {
+        stage('Clonar Código') {  
             steps {
                 git 'https://github.com/IAMR23/ESPERooms.git'
             }
