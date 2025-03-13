@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar Código') {
             steps {
-                git 'https://github.com/IAMR23/back-forest.git'  // Cambia por tu repo
+                git 'https://github.com/IAMR23/ESPERooms.git'
             }
         }
 
