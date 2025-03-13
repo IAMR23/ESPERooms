@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_HOME = tool 'NodeJS'  // Asegúrate de haber configurado NodeJS en Jenkins
+        NODEJS_HOME = tool 'NodeJS'
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
     }
 
     stages {
         stage('Clonar Código') {  
             steps {
-                git 'https://github.com/IAMR23/ESPERooms.git'
+                git branch: 'main', url: 'https://github.com/IAMR23/ESPERooms.git'
             }
         }
 
@@ -24,6 +24,5 @@ pipeline {
                 sh 'npm test'
             }
         }
-
     }
 }
